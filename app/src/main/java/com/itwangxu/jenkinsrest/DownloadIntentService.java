@@ -22,6 +22,7 @@ import java.io.InputStream;
 import java.io.RandomAccessFile;
 import java.util.Random;
 
+import es.dmoral.toasty.Toasty;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 import okhttp3.ResponseBody;
@@ -126,7 +127,7 @@ public class DownloadIntentService extends IntentService {
                 .onDenied(new Action<File>() {
                     @Override
                     public void onAction(File data) {
-                        Toast.makeText(DownloadIntentService.this, "请给予权限以安装apk", Toast.LENGTH_SHORT).show();
+                        Toasty.info(DownloadIntentService.this, "请给予权限以安装apk", Toast.LENGTH_SHORT).show();
                     }
                 }).start();
 

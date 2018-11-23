@@ -85,7 +85,7 @@ class BuildDetailActivity : BaseActivity() {
         }
         downloadButton.setOnClickListener{ view ->
             if (isServiceRunning(DownloadIntentService::class.java.name)) {
-                Toast.makeText(this@BuildDetailActivity, "已有任务正在下载，请查看任务栏", Toast.LENGTH_SHORT).show()
+                Toasty.info(this@BuildDetailActivity, "已有任务正在下载，请查看任务栏", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
             AndPermission.with(this@BuildDetailActivity)
@@ -99,9 +99,9 @@ class BuildDetailActivity : BaseActivity() {
                         intent.putExtra("download_id",buildNum.toInt())
                         intent.putExtra("download_file",t.artifacts[0].fileName)
                         startService(intent)
-                        Toast.makeText(this@BuildDetailActivity, "任务下载后自动安装，请查看任务栏", Toast.LENGTH_SHORT).show()
+                        Toasty.info(this@BuildDetailActivity, "任务下载后自动安装，请查看任务栏", Toast.LENGTH_SHORT).show()
                     }.onDenied {
-                        Toast.makeText(this@BuildDetailActivity, "请给予权限以下载apk", Toast.LENGTH_SHORT).show()
+                        Toasty.info(this@BuildDetailActivity, "请给予权限以下载apk", Toast.LENGTH_SHORT).show()
                     }.start()
 
 
