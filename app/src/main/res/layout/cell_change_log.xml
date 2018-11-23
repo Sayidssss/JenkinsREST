@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:padding="10dp">
+
+
+    <TextView
+        android:id="@+id/author"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="author:zhang93"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:id="@+id/authorEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="authorEmail:zhang93@qq.com"
+        android:textColor="#000000"/>
+
+
+    <TextView
+        android:id="@+id/commitMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="Comment:云仓消息"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="Commit Date:2018-08-25 14:34:13 +0800"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:id="@+id/commitId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="Commit Id:677143e905595c38854b6cb1f975c977ecad8bc3"
+        android:textColor="#000000"
+        android:textSize="12sp"/>
+
+    <Button
+        android:id="@+id/affectedPaths"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="查看影响文件"/>
+
+
+</LinearLayout>
